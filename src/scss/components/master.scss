@@ -52,7 +52,7 @@
   }
 
   &__sqr {
-    display: none;
+    //display: none;
   }
 
   &__phone {
@@ -119,8 +119,8 @@
 
 
     &__main-img {
-      min-width: 478px;
-      min-height: 425px;
+      min-width: 29.87rem;
+      min-height: 26.56rem;
       background-image: url("../../assets/tablet/image-keyboard.jpg");
       background-size: cover;
 
@@ -140,7 +140,7 @@
     }
 
     &__glass {
-      min-width: 445px;
+      min-width: 27.81rem;
       background-image: url("../../assets/tablet/image-glass-and-keyboard.jpg");
 
     }
@@ -159,7 +159,92 @@
 
     &__paragraph {
       margin-block-start: 0;
-      max-width: 398px;
+      max-width: 24.87rem;
     }
   }
+}
+
+@include breakpoint(desktop) {
+  .master {
+    $marginQuerie: 10.31rem;
+    display: grid;
+    grid-template-columns:$marginQuerie 1fr 1fr $marginQuerie;
+    row-gap: 1.87rem;
+    grid-template-areas: ". texto group1 group1"
+                         "group2 group2 texto2 .";
+
+    &__text {
+      max-width: 27.81rem;
+    }
+
+    &__img-group1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.87rem;
+    }
+
+    &__main-img {
+      min-width: 33.75rem;
+      min-height: 30rem;
+      background-image: url("../../assets/desktop/image-keyboard.jpg");
+
+    }
+
+    &__main-sqr {
+      min-width: 14.06rem;
+      min-height: 15rem;
+      background-image: url("../../assets/shared/pattern-square.svg");
+      background-size: cover;
+
+      align-self: flex-start;
+    }
+
+    &__sqr {
+      min-width:15.93rem;
+      min-height: 14.75rem;
+      background-image: url("../../assets/shared/pattern-square.svg");
+
+      align-self: flex-end;
+    }
+
+    &__phone {
+      min-width: 15.93rem;
+      min-height: 30rem;
+      background-image: url("../../assets/desktop/image-phone-and-keyboard.jpg");
+    }
+
+    &__glass {
+      margin-inline-start: 0;
+      min-width: 27.81rem;
+      min-height: 30rem;
+      background-image: url("../../assets/desktop/image-glass-and-keyboard.jpg");
+    }
+
+    &__mechanical {
+      grid-area:texto2;
+      justify-self: end;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      max-width: 15.93rem;
+
+      & p {
+        margin-block-start: 1.68rem;
+      }
+    }
+
+    &__img-group2 {
+      margin-inline-start: -7.81rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.87rem;
+    }
+
+    margin-block-end: 10.5rem;
+
+  }
+
 }
