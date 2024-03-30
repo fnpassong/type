@@ -1,1 +1,102 @@
 @use '../abstract' as *;
+
+.master {
+  display: grid;
+  grid-template-columns:1.5rem 1fr 1.5rem;
+  row-gap: $margin;
+  grid-template-areas: ". texto ."
+                       ". group1 group1"
+                       "group2 group2 ."
+                       ". text2 .";
+
+
+  &__text {
+    grid-area:texto;
+  }
+
+  &__main-title {
+    @extend %ffblack;
+    font-size: $font-lg;
+    line-height: 3rem;
+  }
+
+  &__main-paragraph {
+    @extend %ff500;
+    margin-block: $margin-md;
+  }
+
+  &__btn-group {
+    margin-block-end: $margin-xl;
+   @include flex(space-between, center, row);
+
+  & .btn {
+      --bg:hsl(22 89% 52%);
+      --text: #fff;
+      --text-hover:var(--text);
+      --bg-hover:hsl(22 100% 69%);
+    }
+
+    & > p {
+      @extend %ffmedium;
+    }
+  }
+
+  &__img-group1 {
+    grid-area:group1 ;
+  }
+
+  &__img-group2 {
+    grid-area:group2;
+
+    display: flex;
+  }
+
+  &__sqr {
+    display: none;
+  }
+
+  &__phone {
+    min-width: 129px;
+    min-height: 193px;
+    background-image: url("../../assets/mobile/image-phone-and-keyboard.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-inline-start: -$margin;
+    border-radius: 0.7rem;
+  }
+
+  &__glass {
+    min-width:220px;
+    min-height: 193px;
+    background-image: url("../../assets/mobile/image-glass-and-keyboard.jpg");
+    background-size: cover;
+    margin-inline-start: $margin;
+    border-radius: 0.7rem;
+  }
+
+  &__main-img {
+    min-width: 372px;
+    min-height: 331px;
+    background-image: url("../../assets/mobile/image-keyboard.jpg");
+    background-size: cover;
+    border-radius: 0.7rem;
+  }
+
+  &__mechanical {
+    grid-area: text2;
+    margin-block-start: 4.68rem;
+    margin-block-end: 6.93rem;
+  }
+
+  &__title {
+    @extend %ffblack;
+    width: min-content;
+    margin-inline: auto;
+  }
+
+  &__paragraph {
+    @extend %ff500;
+    margin-block-start: $margin;
+  }
+
+}
