@@ -100,3 +100,66 @@
   }
 
 }
+
+//////breakpoint tablet
+
+@include breakpoint(tablet) {
+  .master {
+    $marginQuerie: 2.43rem;
+    display: grid;
+    grid-template-columns:$marginQuerie 1fr 1fr $marginQuerie;
+    row-gap: $margin;
+    grid-template-areas: ". texto group1 group1 "
+                         ". group2 group2 ."
+                         ". texto2 texto2 .";
+
+    &__text {
+      margin-block-start: 6.25rem;
+    }
+
+
+    &__main-img {
+      min-width: 478px;
+      min-height: 425px;
+      background-image: url("../../assets/tablet/image-keyboard.jpg");
+      background-size: cover;
+
+      margin-inline-start: 4.31rem;
+    }
+
+    &__img-group2 {
+      grid-area: group2;
+
+    }
+
+    &__phone {
+      min-width: 13.37rem;
+      min-height: 20rem;
+      background-image: url("../../assets/tablet/image-phone-and-keyboard.jpg");
+      margin-inline-start: 0;
+    }
+
+    &__glass {
+      min-width: 445px;
+      background-image: url("../../assets/tablet/image-glass-and-keyboard.jpg");
+
+    }
+
+    &__mechanical {
+      margin-block-start: 4rem;
+      grid-area: texto2;
+      @include flex(space-between, center, row);
+
+    }
+
+    &__title {
+      text-align: left;
+      margin-inline: 0;
+    }
+
+    &__paragraph {
+      margin-block-start: 0;
+      max-width: 398px;
+    }
+  }
+}

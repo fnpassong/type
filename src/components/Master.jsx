@@ -25,7 +25,7 @@ const Master =()=> {
                 <div className="master__glass"></div>
             </div>
             <div className="master__mechanical">
-                <h2 className="master__title text-upper text-center text-blue">
+                <h2 className="master__title text-upper text-blue">
                     mechanical wireless keyboard
                 </h2>
                 <p className="master__paragraph text-grey">
