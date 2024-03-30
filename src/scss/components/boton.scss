@@ -1,0 +1,22 @@
+@use '../abstract' as *;
+
+.btn {
+  padding-block: 0.68rem;
+  padding-inline:0.84rem;
+  border-radius: 0.5rem;
+
+  @extend %ffmedium;
+  font-size: $font-base;
+  --text:hsl(220 50% 17%);
+  --bg: hsl(198 28% 93%) ;
+  color: var(--text);
+  background-color:var(--bg) ;
+
+  &:hover {
+    --text-hover:hsl(198 28% 93%);
+    --bg-hover: hsl(220 50% 17%);
+    color: var(--text-hover);
+    background-color: var(--bg-hover);
+  }
+
+}

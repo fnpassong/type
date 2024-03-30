@@ -1,0 +1,30 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, video, svg, iframe {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+//UTILITIES
+
+.text-center {
+  text-align: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  --margin: 1.5rem;
+  --max-width: 23.43rem;
+  width: min(100% - var(--margin), var(--max-width));
+  margin-inline: auto;
+}

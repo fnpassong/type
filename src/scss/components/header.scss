@@ -1,0 +1,10 @@
+@use '../abstract'as *;
+
+.hdr {
+  margin-block-start:1.43rem;
+  margin-block-end: $margin-xl;
+  &__wrapper {
+   @include flex(space-between, center, row);
+  }
+
+}

@@ -1,0 +1,29 @@
+
+
+$clr-orange:hsl(22 89% 52%);
+$clr-orangeLight:hsl(22 100% 69%);
+$clr-blue: hsl(220 50% 17%);
+$clr-grey: hsl(221 23% 58%);
+$clr-smoke: hsl(198 28% 93%);
+$clr-white: hsl(0 0% 100%);
+
+//maps color
+
+$colors : (
+'orange':hsl(22 89% 52%),
+ 'orangeLight': $clr-orangeLight,
+        'blue':$clr-blue,
+        'smoke': $clr-smoke,
+        'grey':$clr-grey,
+        'white': $clr-white,
+);
+
+@each $key, $val in $colors{
+  .text-#{$key} {
+    color:$val;
+}
+  .bg-#{$key} {
+    background-color: $val;
+  }
+
+}
