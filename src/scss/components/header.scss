@@ -1,10 +1,59 @@
 @use '../abstract'as *;
 
 .hdr {
+  $marginQuerie: 1.5rem;
   margin-block-start:1.43rem;
   margin-block-end: $margin-xl;
   &__wrapper {
-   @include flex(space-between, center, row);
+    display: grid;
+    grid-template-columns:$marginQuerie 1fr 1fr $marginQuerie ;
+    grid-template-areas: ". logo boton .";
+
+    & > img {
+      grid-area: logo;
+    }
+    & .btn {
+      justify-self: end;
+      grid-area: boton;
+    }
   }
 
+}
+
+@include breakpoint(tablet) {
+  .hdr {
+    $marginQuerie: 2.43rem;
+    &__wrapper {
+      display: grid;
+      grid-template-columns:$marginQuerie 1fr 1fr $marginQuerie ;
+      grid-template-areas: ". logo boton .";
+
+      & > img {
+        grid-area: logo;
+      }
+      & .btn {
+        justify-self: end;
+        grid-area: boton;
+      }
+    }
+  }
+}
+
+@include breakpoint(desktop) {
+  .hdr {
+    $marginQuerie: 10.31rem;
+    &__wrapper {
+      display: grid;
+      grid-template-columns:$marginQuerie 1fr 1fr $marginQuerie ;
+      grid-template-areas: ". logo boton .";
+
+      & > img {
+        grid-area: logo;
+      }
+      & .btn {
+        justify-self: end;
+        grid-area: boton;
+      }
+    }
+  }
 }
