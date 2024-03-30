@@ -28,3 +28,7 @@ img, video, svg, iframe {
   width: min(100% - var(--margin), var(--max-width));
   margin-inline: auto;
 }
+
+ul {
+  list-style: none;
+}

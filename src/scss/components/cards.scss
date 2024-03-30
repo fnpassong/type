@@ -1,0 +1,68 @@
+@use '../abstract' as *;
+
+li + li {
+  margin-block-start: $margin-xl;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr 1.5rem;
+  grid-template-areas: ". compatible ."
+                       " . bluetooth ."
+                       ". battery ."
+                       ". light .";
+
+
+  &__compatible {
+    grid-area: compatible;
+  }
+
+  &__bluetooth {
+    grid-area: bluetooth;
+  }
+
+  &__battery {
+    grid-area: battery;
+  }
+
+  &__light {
+    grid-area: light;
+  }
+
+  & [class*='card__icon-'] {
+    padding: 1rem;
+    border-radius: 0.8rem;
+  }
+
+  &__title {
+    margin-inline: auto;
+    max-width: 200px;
+    margin-block-start: 3rem;
+    margin-block-end: 1.5rem;
+
+    font-size:1.5rem ;
+    @extend %ffblack;
+  }
+
+  &__paragraph {
+    font-size: 1rem;
+    line-height: 26px;
+  }
+
+  margin-block-end: 6rem;
+
+
+}
+
+section >
+    p {
+      color: red;
+      margin-inline-start: 3.18rem;
+
+    span {
+      @extend %ffmedium;
+    }
+}
+
+
+
