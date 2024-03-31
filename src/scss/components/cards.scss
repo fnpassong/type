@@ -89,3 +89,20 @@ p {
   }
 }
 
+@include breakpoint(desktop) {
+  .card {
+     display:grid ;
+     grid-template-columns: 10.31rem 1fr 1fr 1fr 1fr 10.31rem;
+     grid-template-areas: ". compatible bluetooth battery light .";
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    & > * {
+      max-width:15.93rem;
+    }
+
+  }
+}
+
