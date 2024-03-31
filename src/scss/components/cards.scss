@@ -58,7 +58,7 @@ li + li {
 
 section >
 p {
-      margin-inline-start: 3.18rem;
+      //margin-inline-start: 3.18rem;
 
     span {
       @extend %ffmedium;
@@ -67,7 +67,6 @@ p {
 
 @include breakpoint(tablet) {
   .card {
-    //ax-width: 60ch;
     display: grid;
     grid-template-columns: 39px 1fr 1fr 98px;
     grid-template-areas: ". compatible bluetooth ."
@@ -82,8 +81,9 @@ p {
       margin-block-end: 4.5rem;
     }
 
-  }
+    margin-block-end: 142px;
 
+  }
   li + li {
     margin-block-start: 0;
   }

@@ -17,7 +17,7 @@ const Cards =()=> {
                 }
             </ul>
 
-            <p className= 'text-grey'><span>Typemaster 2021</span>  |  All Rights Reserved</p>
+            <p className= 'text-grey text-center'><span>Typemaster 2021</span>  |  All Rights Reserved</p>
         </section>
     )
 }
