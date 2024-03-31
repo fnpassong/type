@@ -30,6 +30,8 @@ li + li {
   }
 
   & [class*='card__icon-'] {
+    width: 65px;
+    aspect-ratio: 1;
     padding: 1rem;
     border-radius: 0.8rem;
   }
@@ -55,7 +57,7 @@ li + li {
 }
 
 section >
-    p {
+p {
       margin-inline-start: 3.18rem;
 
     span {
@@ -63,5 +65,27 @@ section >
     }
 }
 
+@include breakpoint(tablet) {
+  .card {
+    //ax-width: 60ch;
+    display: grid;
+    grid-template-columns: 39px 1fr 1fr 98px;
+    grid-template-areas: ". compatible bluetooth ."
+                         ". battery light .";
 
+    & [class*='card__'] {
+      text-align: left;
+      margin-inline:0;
+    }
+
+    &__compatible {
+      margin-block-end: 4.5rem;
+    }
+
+  }
+
+  li + li {
+    margin-block-start: 0;
+  }
+}
 
